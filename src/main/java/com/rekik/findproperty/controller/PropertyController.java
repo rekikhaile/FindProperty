@@ -20,6 +20,12 @@ public class PropertyController {
 
     public static final String BASE_URI = "http://webservice-takehome-1.spookle.xyz/property?property_id=";
 
+    /**
+     *
+     * @param propertyids
+     * @return property owner who owns the highest valued property in the state of Virginia
+     */
+
     @PostMapping(value = "/owner")
     public String highestValuedPropertyOwnerinVA(@RequestBody List<String> propertyids) {
 
@@ -69,7 +75,13 @@ public class PropertyController {
     }
 
 
-    @GetMapping("/")
+    /**
+     *
+     * @param id
+     * @return An owner of a property with a given proprty id
+     */
+
+    /*@GetMapping("/")
     public @ResponseBody String getThisOwner(@RequestParam(value = "id") String id) {
         RestTemplate restTemplate = new RestTemplate();
 
@@ -81,6 +93,6 @@ public class PropertyController {
         // return resourceURI.toString();
         return property.getOwner();
 
-    }
+    }*/
 
 }
