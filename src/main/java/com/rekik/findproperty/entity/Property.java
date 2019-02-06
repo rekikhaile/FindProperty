@@ -3,21 +3,19 @@ package com.rekik.findproperty.entity;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-//public class Property implements Comparable<Property>{
 public class Property{
-
 
     private Address address;
     private String home_id;
     private String owner;
-    private long value;
+    private Long value;
 
 
     public Property() {
-        super();
+       super();
     }
 
-    public Property(Address address, String home_id, String owner, long value) {
+    public Property(Address address, String home_id, String owner, Long value) {
         super();
         this.address = address;
         this.home_id = home_id;
@@ -49,11 +47,11 @@ public class Property{
         this.owner = owner;
     }
 
-    public long getValue() {
+    public Long getValue() {
         return value;
     }
 
-    public void setValue(long value) {
+    public void setValue(Long value) {
         this.value = value;
     }
 
@@ -62,12 +60,4 @@ public class Property{
         return "Property [address=" + address + ", home_id=" + home_id + ", owner=" + owner + ", value=" + value + "]";
     }
 
-
-   /* @Override
-    public int compareTo(Property o) {
-        if(this.getValue() > o.getValue())
-            return 0;
-        else
-            return 1;
-    }*/
 }
