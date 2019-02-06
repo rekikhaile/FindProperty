@@ -2,7 +2,7 @@ package com.rekik.findproperty.exceptionhandling;
 
 public class InvalidInputException extends RuntimeException {
 
-    private String message = "lorum ipsum";
+    private String message;
 
     public InvalidInputException() {
     }
